@@ -1,0 +1,8 @@
+{
+  "name": "Remix Remix Remix Remix Mission Control 3D",
+  "description": "3D cooperative space operations and modular rocket engineering game prototype.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

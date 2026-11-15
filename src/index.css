@@ -1,0 +1,160 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Chakra Petch', sans-serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+    --font-hand: 'Caveat', 'Patrick Hand', cursive;
+  }
+
+  html,
+  body,
+  #root {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #060911;
+    color: #f1f5f9;
+    font-family: var(--font-sans);
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono-tabular {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.font-handwriting {
+  font-family: var(--font-hand);
+}
+
+/* Authentic lined handwritten notebook paper for desk drawer notes */
+.handwritten-paper {
+  background-color: #faf6ea;
+  background-image:
+    linear-gradient(90deg, transparent 42px, rgba(220, 38, 38, 0.28) 42px, rgba(220, 38, 38, 0.28) 44px, transparent 44px),
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0px,
+      transparent 30px,
+      rgba(59, 130, 246, 0.16) 30px,
+      rgba(59, 130, 246, 0.16) 31px
+    );
+}
+
+@keyframes alertStrobePulse {
+  0%,
+  100% {
+    opacity: 0.22;
+  }
+  50% {
+    opacity: 0.56;
+  }
+}
+
+.red-alert-strobe {
+  animation: alertStrobePulse 1.1s ease-in-out infinite;
+}
+
+@keyframes ariaFloat {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes ariaAntennaPulse {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scale(0.92);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.18);
+  }
+}
+
+@keyframes ariaEyeBlink {
+  0%,
+  44%,
+  48%,
+  92%,
+  96%,
+  100% {
+    transform: scaleY(1);
+  }
+  46%,
+  94% {
+    transform: scaleY(0.12);
+  }
+}
+
+@keyframes ariaEqWave {
+  0%,
+  100% {
+    transform: scaleY(0.28);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+.aria-robot-float {
+  animation: ariaFloat 3.6s ease-in-out infinite;
+}
+
+.aria-antenna-pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ariaAntennaPulse 2.1s ease-in-out infinite;
+}
+
+.aria-eye-blink {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ariaEyeBlink 5.4s ease-in-out infinite;
+}
+
+.aria-eq-bar {
+  transform-origin: center bottom;
+  animation: ariaEqWave 0.46s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aria-robot-float,
+  .aria-antenna-pulse,
+  .aria-eye-blink,
+  .aria-eq-bar {
+    animation: none;
+  }
+}
+
+/* Custom subtle scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b101b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
