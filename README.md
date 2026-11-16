@@ -1,4 +1,5 @@
 # 🚀 Orbital Mission
+Instant public local web adress: https://copypaste-pray.vercel.app
 
 ![Orbital Mission Banner](./WhatsApp%20Image%202026-11-15%20at%2014.30.58.jpeg)
 
